@@ -13,12 +13,18 @@ DELETE:
     deleteOne      /api/tasks/:id
 */
 const express = require('express');
-const bodyParser = require('body-parser');
 
-const tasks = []; //id:number, description:__, dateCreate:__, status: done/not done
-let nextID = 1;
+const taskApiRouter = require('taskApiRouter');
 
 const app = express();
-app.use('/api', bodyParser.json());
+app.use(express.static(__dirname + './public'));
+app.use('/api/tasks', taskApiRouter);
 
 app.listen(3000);
+//const bodyParser = require('body-parser');
+//app.use('/api', bodyParser.json());
+//const tasks = []; //id:number, description:__, dateCreate:__, status: done/not done
+//let nextID = 1;
+
+
+
