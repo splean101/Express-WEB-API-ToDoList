@@ -14,17 +14,13 @@ DELETE:
 */
 const express = require('express');
 
-const taskApiRouter = require('taskApiRouter');
+const taskApiRouter = require('./task/taskApiRouter');
 
 const app = express();
 app.use(express.static(__dirname + './public'));
-app.use('/api/tasks', taskApiRouter);
+//app.use('/api/tasks', taskApiRouter);
 
 app.listen(3000);
-//const bodyParser = require('body-parser');
-//app.use('/api', bodyParser.json());
-//const tasks = []; //id:number, description:__, dateCreate:__, status: done/not done
-//let nextID = 1;
 
 
 

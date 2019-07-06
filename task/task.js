@@ -1,5 +1,5 @@
-let tasks = [];
-let nextID = 1;
+let tasks = [{id:1, description: "do homework"}]; //id:number, description:__, dateCreate:__, status: done/not done
+let nextID = 2;
 
 module.exports = class Task{
     constructor(description){
@@ -18,5 +18,10 @@ module.exports = class Task{
                 return task;
             }
         }
+    }
+
+
+    static has (id){
+        return Boolean(Task.getById(id));
     }
 }
