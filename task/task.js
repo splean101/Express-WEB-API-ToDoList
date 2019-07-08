@@ -5,7 +5,7 @@ module.exports = class Task{
     constructor(description){
         this._id = nextID++;
         this.description = description;
-        this.date = new Date().toLocaleTimeString();
+        this.date = new Date().toLocaleString();
         this.status = false;
     }
     get id(){
@@ -26,4 +26,4 @@ module.exports = class Task{
     static has (id){
         return Boolean(Task.getById(id));
     }
-}
+};
