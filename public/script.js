@@ -12,9 +12,14 @@ let resultData = document.getElementById('result-data');
 get.addEventListener('click', () => {
     fetch(`/api/tasks/${id.value}`)
     .then((res) => {
+        console.log(`status - ${res.status} stext - ${res.statusText}`);
+        
         resultStatus.innerText = `${res.status} ${res.statusText}`;
         return res.text();
     })
-    .then((res) => resultData.innerText = res)
+    .then((res) => {
+        console.log(res);
+        resultData.innerText = res;
+    })
     .catch((e) => console.dir(e));
 });
