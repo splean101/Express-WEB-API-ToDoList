@@ -17,8 +17,8 @@ const express = require('express');
 const taskApiRouter = require('./task/taskApiRouter');
 
 const app = express();
-app.use(express.static(__dirname + './public'));
-//app.use('/api/tasks', taskApiRouter);
+app.use(express.static(__dirname + '/public'));
+app.use('/api/tasks', taskApiRouter);
 
 app.listen(3000);
 
