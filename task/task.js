@@ -5,6 +5,8 @@ module.exports = class Task{
     constructor(description){
         this._id = nextID++;
         this.description = description;
+        this.date = new Date().toLocaleTimeString();
+        this.status = false;
     }
     get id(){
         return this._id;
