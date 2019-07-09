@@ -12,5 +12,5 @@ taskApiRouter.use('/:id', (req, res, next) => {
     next();
 });
 
-taskApiRouter.route('./:id')
+taskApiRouter.route('/:id')
 .get(taskApiController.get)
