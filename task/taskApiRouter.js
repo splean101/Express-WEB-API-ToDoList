@@ -14,3 +14,5 @@ taskApiRouter.use('/:id', (req, res, next) => {
 
 taskApiRouter.route('/:id')
 .get(taskApiController.get)
+.put(taskApiController.put)
+.delete(taskApiController.delete);
