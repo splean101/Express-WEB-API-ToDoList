@@ -4,13 +4,13 @@ GET:
     getAllByStatus /api/tasks/bystatus
     getDone        /api/tasks/done
     getNotDone     /api/tasks/notdone
-    getByID        /api/tasks/:id
+    -getByID        /api/tasks/:id
 POST:
-    addNewTask     /api/tasks/ BODY {description: 'text' - String}
+    -addNewTask     /api/tasks/ BODY {description: 'text' - String}
 PUT:
-    updateOne      /api/tasks/:id  BODY {description: 'text' - String}
+    -updateOne      /api/tasks/:id  BODY {description: 'text' - String}
 DELETE:
-    deleteOne      /api/tasks/:id
+    -deleteOne      /api/tasks/:id
 */
 const express = require('express');
 

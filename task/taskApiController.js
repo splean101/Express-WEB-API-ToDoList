@@ -38,6 +38,18 @@ let taskApiController = {
         } else {
             res.status(404).send(`Can not get task with ID: ${id}`);
         };
+    },
+    getAllByDate (req, res){
+
+    },
+    getAllByStatus (req, res){
+
+    },
+    getDone (req, res){
+
+    },       
+    getNotDone(req, res){
+
     }
 };
 
